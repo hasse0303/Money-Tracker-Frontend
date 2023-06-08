@@ -1,0 +1,13 @@
+table {
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.action{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

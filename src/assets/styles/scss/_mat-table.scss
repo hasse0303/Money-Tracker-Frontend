@@ -1,0 +1,94 @@
+@mixin mat-table-columns($columns)
+{
+  .mat-column-
+  {
+    @each $colName, $props in $columns {
+
+      $width: map-get($props, 'width');
+
+      &#{$colName}
+      {
+        flex: $width;
+        width: $width;
+
+        @if map-has_key($props, 'text-align')
+        {
+          text-align: map-get($props, "text-align");
+        }
+        @if map-has_key($props, 'justify-content')
+        {
+          justify-content: map-get($props, "justify-content");
+        }
+
+        @if map-has-key($props, 'color')
+        {
+          color: map-get($props, 'color');
+        }
+
+        @if map-has-key($props, 'min-width') {
+          min-width: map-get($props, 'min-width');
+        }
+        @if map-has-key($props, 'max-width') {
+          max-width: map-get($props, 'max-width');
+        }
+
+      }
+    }
+  }
+}
+
+
+td.mat-cell,
+th.mat-header-cell,
+td.mat-footer-cell,
+mat-cell,
+mat-header-cell,
+mat-footer-cell {
+  padding: 4px !important;
+}
+
+th.mat-header-cell:first-of-type,
+td.mat-cell:first-of-type,
+td.mat-footer-cell:first-of-type,
+mat-cell:first-of-type,
+mat-header-cell:first-of-type,
+mat-footer-cell:first-of-type {
+	padding-left: 12px !important;
+}
+
+th.mat-header-cell:last-of-type,
+td.mat-cell:last-of-type,
+td.mat-footer-cell:last-of-type,
+mat-cell:last-of-type,
+mat-header-cell:last-of-type,
+mat-footer-cell:last-of-type {
+	padding-right: 12px !important;
+}
+
+// tr.mat-row,
+// tr.mat-footer-row {
+// 	height: 32px !important;
+// }
+
+// mat-row,
+// mat-footer-row {
+//   min-height: 32px !important;
+// }
+
+// td > .mat-icon-button,
+// mat-cell > .mat-icon-button,
+// mat-cell > * .mat-icon-button {
+//     width: 28px !important;
+//     height: 28px !important;
+//     line-height: 28px !important;
+// }
+
+// tr.mat-header-row,
+// mat-header-row {
+// 	min-height: 48px !important;
+// 	height: 48px !important;
+// }
+
+// .mat-paginator-container {
+// 	min-height: 48px !important;
+// }

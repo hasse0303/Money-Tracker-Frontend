@@ -1,0 +1,26 @@
+<mat-toolbar class="side-nav" style="background-color: #FFFFFF">
+ <span class="logo">School Management</span>
+ <div class="btn-menu">
+   <button mat-button routerLink="dashboard" routerLinkActive="active-link">Dashboard</button>
+   <button mat-button routerLink="/user-management" routerLinkActive="active-link">User</button>
+   <button mat-button routerLink="/employee" routerLinkActive="active-link">Employee</button>
+   <!-- <button mat-button routerLink="user-management" routerLinkActive="active-link">Dashboard</button> -->
+  <button mat-button [matMenuTriggerFor]="menuHR">HR</button>
+  <mat-menu #menuHR="matMenu">
+    <button mat-menu-item>Employee</button>
+    <button mat-menu-item>Daily Attendant</button>
+  </mat-menu>
+   <button mat-button [matMenuTriggerFor]="menuAdmin">Administrator</button>
+  <mat-menu #menuAdmin="matMenu">
+    <button mat-menu-item >User Management</button>
+    <button mat-menu-item>Role & Permission</button>
+  </mat-menu>
+ </div>
+ <span class="example-spacer"></span>
+ <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+   <mat-icon>notifications</mat-icon>
+ </button>
+ <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <mat-icon>share</mat-icon>
+</button>
+</mat-toolbar>

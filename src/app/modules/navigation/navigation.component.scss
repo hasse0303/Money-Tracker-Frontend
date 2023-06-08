@@ -1,0 +1,21 @@
+.side-nav {
+  position: fixed;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.btn-menu {
+  margin: 0 14px 0 14px;
+  display: flex;
+}
+.active-link {
+  opacity: .7;
+  background-color: #05a393;
+  color: white;
+  box-shadow: #05a393 0px 2px 8px;
+}
+.logo{
+  color: #05a393;
+}

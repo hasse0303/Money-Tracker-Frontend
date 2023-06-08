@@ -1,0 +1,32 @@
+table {
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.action{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+// @import "~assets/styles/scss/mat-table";
+
+// $date-width: 85px;
+// $amount-width: 80px;
+
+// $columns: (
+//   "no": (
+//     "width": 50px,
+//   ),
+//   "action": (
+//     "width": 50px,
+//     "text-align": center,
+//   ),
+// );
+
+// .mat-table {
+//   @include mat-table-columns($columns);
+// }
