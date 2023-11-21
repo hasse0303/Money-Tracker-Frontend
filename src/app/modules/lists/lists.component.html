@@ -1,0 +1,38 @@
+<div fxLayout="column">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <app-breadcrumb></app-breadcrumb>
+    <button mat-raised-button color="primary">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <mat-accordion  class="example-headers-align">
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-panel-title>
+          <strong>Today</strong>
+          <!-- <div><small>21 Nov, 2023</small></div> -->
+        </mat-panel-title>
+        <div style="margin-right: 2.5rem;">
+          <span>{{-6.7 | currency}}</span>
+        </div>
+      </mat-expansion-panel-header>
+      <div fxLayout="row" fxLayoutAlign="space-between start" class="my-05">
+        <div fxLayout="row" fxLayoutAlign="start start">
+          <div>
+            <mat-icon color="primary">cable</mat-icon>
+          </div>
+          <div>
+            <b>Electric</b>
+            <div><small>Personal</small></div>
+            <p>EDC</p>
+          </div>
+        </div>
+        <div>
+          <div style="color: red;">{{1.46 | currency}}</div>
+          <p>KHR8500</p>
+        </div>
+      </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
