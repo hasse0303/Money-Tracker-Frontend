@@ -5,7 +5,34 @@
       <mat-icon>add</mat-icon>
     </button>
   </div>
-  <mat-accordion  class="example-headers-align">
+  <div fxLayout="row" fxLayoutAlign="space-between enter">
+    <div>
+      <mat-form-field>
+        <mat-label>Month</mat-label>
+        <input matInput [matDatepicker]="dp" [formControl]="date">
+        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+        <mat-datepicker #dp
+                        (monthSelected)="setMonthAndYear($event, dp)"
+                        panelClass="example-month-picker">
+        </mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutGap="3rem">
+      <div>
+        <p>Income</p>
+        <small class="income">{{400 | currency}}</small>
+      </div>
+      <div>
+        <p>Expanse</p>
+        <small class="expense">{{123 | currency}}</small>
+      </div>
+      <div>
+        <p>Total</p>
+        <small>{{234 | currency}}</small>
+      </div>
+    </div>
+  </div>
+  <mat-accordion  class="mat-acc">
     <mat-expansion-panel [expanded]="true">
       <mat-expansion-panel-header fxLayout="row" fxLayoutAlign="space-between center">
         <mat-panel-title>
@@ -25,6 +52,36 @@
             <b>Electric</b>
             <div><small>Personal</small></div>
             <p>EDC</p>
+          </div>
+        </div>
+        <div>
+          <div style="color: red;">{{1.46 | currency}}</div>
+          <p>KHR8500</p>
+        </div>
+      </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-accordion  class="mat-acc">
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-panel-title>
+          <strong>Yesterday</strong>
+          <!-- <div><small>21 Nov, 2023</small></div> -->
+        </mat-panel-title>
+        <div style="margin-right: 2.5rem;">
+          <span>{{-6.7 | currency}}</span>
+        </div>
+      </mat-expansion-panel-header>
+      <div fxLayout="row" fxLayoutAlign="space-between start" class="my-05">
+        <div fxLayout="row" fxLayoutAlign="start start">
+          <div>
+            <mat-icon color="primary">restaurant </mat-icon>
+          </div>
+          <div>
+            <b>Food</b>
+            <div><small>Personal</small></div>
+            <p>Dinner</p>
           </div>
         </div>
         <div>

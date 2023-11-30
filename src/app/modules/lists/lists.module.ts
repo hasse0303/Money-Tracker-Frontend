@@ -6,6 +6,7 @@ import { ListsComponent } from './lists.component';
 import { SharedComponentModule } from 'src/app/shared/component/shared-component.module';
 import { SharedMaterialModule } from 'src/app/shared/modules/shared-material/shared-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ListsRoutingModule,
     SharedMaterialModule,
     SharedComponentModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ListsModule { }
