@@ -1,3 +1,4 @@
+@import "./../../../assets/styles/scss/_variable.scss";
 .side-nav {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;;
 }
@@ -10,10 +11,10 @@
 }
 .active-link {
   opacity: .7;
-  background-color: #05a393;
+  background-color: $primary-color;
   color: white;
-  box-shadow: #05a393 0px 2px 8px;
+  box-shadow: $primary-color 0px 2px 8px;
 }
 .logo{
-  color: #05a393;
+  color: $primary-color;
 }
